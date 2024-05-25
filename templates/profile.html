@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Profile
+{% endblock %}
+
+
+{% block main %}
+
+<div class="container">
+    {% include "parts/header2.html" %}
+</div>
+
+<h1>This is a Profile</h1>
+
+<div class="row justify-content-md-center">
+    {% for cofee in cofeedb %}
+    <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card">
+            <img src="static/img/coffee/{{ cofee["img"] }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h3 class="card-title text-center">{{cofee["name"]}}</h3>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <br>
+                    <form action="/coffee/{{cofee["id"]}}" method="POST">
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Odrer</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+          </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+{% endblock %}
+

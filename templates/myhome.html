@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Order
+{% endblock %}
+
+{% block main %}
+
+<div class="container">
+    {% include "parts/header2.html" %}
+</div>
+
+<h1 class="myordersheared">My Orders</h1>
+    {% for cofee in dbs %}
+        <div class="container-fluid centering">
+            <div class="messages card">
+                <div class="countoforder">
+                    <h2>{{ cofee["count"] }}<span> </span></h2>
+                </div>
+                <h1>  {{ cofee["name"] }}</h1>
+                <div class="coffereport">
+                    <h2></h2>
+                    <h4 class="imgprice">{{ cofee["price"] | usd}}</h4>
+                    <img src="static/img/coffee/{{ cofee["img"] }}" alt="{{ cofee["img"]}}">
+                    <h6 class="orderdata">{{cofee["orderDate"]}}</h6>
+                </div>
+                <h3 class="ordertotalprc">total price: {{ (cofee["count"] * cofee["price"] ) | usd}}</h3>   
+            </div>
+        </div>
+        <br>
+    {% endfor %}
+{# <h1>Cofee {{ coffee["name"] }}</h1> #}
+
+{# <img src="../static/img/coffee/{{coffee['img'] }}" alt="{{coffee['img']}}" style="width: 400px; height: 400px; padding-right: 0;">
+<br>
+
+<p>{{coffee['content']}}</p> #}
+
+
+
+{% endblock %}

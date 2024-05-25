@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Order
+{% endblock %}
+
+{% block main %}
+
+<div class="container">
+    {% include "parts/header2.html" %}
+</div>
+
+<h1 class="myordersheared text-right">Login brs</h1>
+<div class="container emp">
+    <div class="centring-emp">
+        <img class="barista-log" src="/static/img/inc/barista.jpg" alt="">
+        <form action="/barista-login" method="post">
+            <div class="mb-3 row">
+              <label for="staticEmail" class="col-sm-12 col-md-4 col-form-label">Email</label>
+              <div class="col-sm-12 col-md-8">
+                <input type="text" class="form-control" name="email" placeholder="email@empl.com" style="padding-left: 5px;">
+              </div>
+            </div>
+            <div class="mb-3 row">
+              <label for="inputPassword" class="col-sm-12 col-md-4 col-form-label">Password</label>
+              <div class="col-sm-12 col-md-8">
+                <input type="password" class="form-control" name="password">
+              </div>
+            </div>
+                <button type="submit" class="btn btn-primary" style="float:right;">Login</button>
+            <br>
+        </form>
+    </div>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Login
+{% endblock %}
+
+{% block main %}
+
+<div class="container">
+  {% include "parts/header.html" %}
+</div>
+
+
+<h1>Login</h1>
+<div class="row">
+    <div class="col"></div>
+    <div class="col">
+        <form action="/login" method="post">
+            <div class="mb-3 row">
+              <label for="staticEmail" class="col-sm-12 col-md-4 col-form-label">Email</label>
+              <div class="col-sm-12 col-md-8">
+                <input type="text" class="form-control" name="email" placeholder="email@example.com" style="padding-left: 5px;">
+              </div>
+            </div>
+            <div class="mb-3 row">
+              <label for="inputPassword" class="col-sm-12 col-md-4 col-form-label">Password</label>
+              <div class="col-sm-12 col-md-8">
+                <input type="password" class="form-control" name="password">
+              </div>
+            </div>
+                <br>
+                <button type="submit" class="btn btn-primary" style="float:right;">Login</button>
+            <br>
+        </form>
+    </div>
+    <div class="col"></div>
+</div>
+
+{% endblock %}

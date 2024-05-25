@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Profile
+{% endblock %}
+
+
+{% block main %}
+
+<div class="container">
+    {% include "parts/header3.html" %}
+</div>
+
+{# <h1 style="text-align: center;">This is a Barsita Profile</h1> #}
+
+<div class="container barprof">
+    <img src="/static/img/inc/Barista-999-Logo.png" alt="" height="150px">
+</div>
+
+<div class="container barprof-dep">
+    <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Order Number</th>
+            <th scope="col">Client</th>
+            <th scope="col">CofeeType</th>
+            <th scope="col">Cofee</th>
+            <th scope="col">Count</th>
+            <th scope="col">Cooking time [minute]</th>
+            {# <th scope="col">position</th> #}
+          </tr>
+        </thead>
+        <tbody>
+        {% for order in baristadb %}
+            <tr class="text-center align-middle">
+              <th scope="row">{{ order['id']}}</th>
+              <td>{{ order['email']}}</td>
+              <td>{{ order['name']}}</td>
+              <td><img src="/static/img/coffee/{{ order['img']}}" alt="{{ order['img']}}"> </td>
+              <th>{{ order['count']}}</th>
+              <th>{{ order['preparationTime']}}</th>
+              {# <td><form style="background:transparent;" action="/done/{{order['id']}}" method="POST"><button type="button" class="btn btn-success" style="width:100px;">Done</button></form></td> #}
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+<div class="container text-end justify-content-end" style="padding-right: 40px;">
+    <hr>
+    <a href="" style="text-decoration: none; padding: 0;"><button type="button" class="btn btn-danger">Clear Orders</button></a>
+</div>
+
+
+{% endblock %}
+

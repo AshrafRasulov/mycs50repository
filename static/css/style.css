@@ -1,0 +1,367 @@
+@font-face {
+    font-family: 'PoetsenOne';
+    src: url("/static/fonts/PoetsenOne-Regular.ttf") format('ttf');
+}
+
+.header nav{
+    background: rgb(45,15,59);
+    background: linear-gradient(318deg, rgba(45,15,59,0.05) 0%, rgba(54,9,62,0.05) 41%, rgba(8,105,115,0.05) 54%, rgba(129,21,154,0.05) 67%, rgba(167,30,17,0.05) 79%, rgba(73,203,0,0.05) 98%);
+}
+
+.header nav li{
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header nav li a:hover{
+    color: rgb(249, 0, 0);
+}
+
+
+
+.coffeimage{
+    height: 120px;width: 120px;
+}
+
+.carousel-item{
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+/* navigation start */
+
+
+.card img{
+    width: 100%;
+    height: 350px;
+}
+
+.card{
+    width: 100%;
+    margin-top: 25px;
+    background: #ffffff;
+}
+
+form{
+    background: #ffffff;
+}
+form label{
+    text-align: right;
+}
+
+/* navigation end */
+
+.container{
+    padding: 0;
+}
+
+
+.red{
+    color: red;
+}
+
+.green{
+    color: lime;
+}
+
+
+/*==================== 
+myhome 
+======================*/
+
+.coffereport{
+    position: relative;
+    padding: 15px;
+    -ms-transform-origin-z: unset;
+    height: 50px;
+}
+
+.coffereport img{
+    position: absolute; height: 90px; width: 90px; border-radius: 50%;
+    margin-left: 370px;
+    margin-top: -96px;
+    border: 5px solid #2a911a;
+}
+
+.coffereport .imgprice{
+    margin-left: 435px;
+    margin-top: -35px;
+    padding: 2px 10px;
+    background-color: darkred;
+    border: 5px solid rgb(221, 255, 0);
+    border-radius: 20px;
+    position: absolute;
+    color: gold;
+    font-weight: bold;
+    z-index: 100;
+}
+
+.messages{
+    width: 600px;
+    margin-left: 0;
+    margin-right: 0;
+}
+.messages .countoforder{
+    width: 64px; height: 68px;
+    margin-left: -33px; margin-top: -35px; padding: 5px; position: absolute; z-index: 100;
+    background-image: url("/static/img/inc/empty-circle-stump.png"); background-size: cover;background-repeat: no-repeat;
+    color: #ff0000; font-weight: bold;
+    
+}
+
+
+
+.centering{
+    display: flex;
+   justify-content: center;
+}
+
+.centering .card{
+    width: 530px;
+    border: 1px solid #fe4e9f;
+    transition: 600ms;
+    filter: drop-shadow(1px 10px 5px #dd580b);
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.centering .card:hover{
+    width: 570px;
+    box-shadow: -4px 5px 26px rgba(252, 4, 58, 0.42);
+    cursor: pointer;
+}
+
+.myordersheared{
+    color: #9c42a4;
+    text-align: center;
+    padding-bottom: 10px;
+    animation: color-change 1s infinite;
+    transition: 600ms;
+}
+
+.messages .ordertotalprc{
+    margin-left: 42px; margin-top: 75px;padding: 5px; position: absolute; z-index: 100;
+    background-color: darkred; border: 5px solid rgb(221, 255, 0);color: gold;border-radius: 5px;
+    font-weight: bold;
+}
+
+.messages h1{
+    padding-left: 60px;
+    padding-top: 15px;
+    color: #fe4e9f;
+}
+
+.messages h2{
+    font-family: "Alfa Slab One", serif;
+    font-weight: 400;
+    font-style: normal;
+    position: absolute; margin-left: 13px; margin-top: -12px;
+    rotate: -9grad;
+    font-size: 64px;
+    font-weight: bold;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(221, 255, 0);
+}
+
+.messages h2 span{
+    display: block;
+    position: absolute; margin-left: 29px; margin-top: -40px;
+    width: 32px;
+    height: 32px;
+    rotate: 20grad;
+    background-image: url("/static/img/inc/xtimes.png"); background-size: cover;background-repeat: no-repeat;
+    filter: drop-shadow(1px 1px 10px #eeff00);
+}
+
+
+.coffereport .orderdata{
+    padding: 5px;
+    position: absolute; margin-left: 445px; margin-top: -115px;
+    background-color: rgb(218, 241, 245);
+    border: 1px solid rgb(19, 128, 147);
+    border-radius: 10px 10px 10px 0;
+    color: a65d27;
+    font-weight: bold;
+    z-index: 100;
+}
+
+
+/*===================
+* employyer
+*/
+.emp{
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.centring-emp{
+    width: 452px;
+    height: 290px;
+    background-image: url("/static/img/inc/borderlog.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid #8a4919;
+    padding: 10px 10px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 25px #1b0c02;
+
+}
+
+.centring-emp .barista-log{
+    position: absolute;
+    margin-top: -50px;
+    margin-left: 90px;
+    width: 250px;
+    height: 70px;
+    border-radius: 10px;
+}
+
+.centring-emp form{
+    margin-top: 40px;
+    margin-right: 45px;
+    padding-left: 5px;
+    background: transparent;
+}
+
+.container .barprof{
+    height: 160px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    /* background: #ae0505;*/
+     background: rgb(46,3,3);
+     background: linear-gradient(159deg, rgba(46,3,3,1) 0%, rgba(121,9,9,1) 42%, rgba(251,56,56,1) 100%);
+    display: flex;
+    justify-content: center;
+}
+.container .barprof-dep{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.container .barprof-dep table thead{
+    color: darkslateblue;
+}
+
+.container .barprof-dep table tbody tr{
+    color: rgba(28, 3, 20, 0.596);
+}
+
+
+.container .barprof-dep table tr:hover{
+    cursor: pointer;
+    color: rgba(167, 30, 17, 0.867);
+}
+
+.container .barprof-dep img{
+    width: 64px;
+    height: 64px;
+    border-radius: 7px;
+    border: 2px solid #15820d;
+}
+/*==================== 
+  Footer 
+====================== */
+
+/* .footer{
+    background: #a9efd3;
+} */
+
+footer.footer {
+    height: 130px;
+}
+
+footer .footer-bg {
+    /* background: #000 none repeat scroll 0 0; */
+    background: rgb(45,15,59);
+    background: linear-gradient(124deg, rgba(45,15,59,1) 0%, rgba(54,9,62,1) 37%, rgba(93,8,115,1) 57%, rgba(193,31,16,1) 82%, rgba(61,156,8,1) 100%);
+    height: 130px;
+    overflow: hidden;
+}
+
+footer.footer .footer-menu {
+    margin: 0
+}
+
+footer.footer .footer-menu ul {
+    line-height: 130px;
+    margin: 0;
+    padding: 0;
+}
+
+footer.footer .footer-menu ul li {
+    display: inline;
+    list-style: outside none none;
+    margin: 0;
+    padding: 30px 0px;
+    
+}
+
+footer.footer .footer-menu ul li a {
+    color: #fff;
+    font-family: "Raleway", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 70px;
+    margin-left: 40px;
+    padding: 26px 10px 26px 0;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+footer.footer .footer-icon p {
+    float: right;
+    line-height: 130px;
+}
+
+footer.footer .footer-icon p i {
+    color: #fff;
+    font-size: 18px;
+    margin-right: 30px;
+    padding: 10px;
+}
+
+
+@keyframes color-change {
+     0% { color: rgba(222, 11, 110, 0.931); }
+    10% { color: rgba(214, 41, 203, 0.931); }
+    20% { color: rgba(151, 41, 214, 0.931); }
+    30% { color: rgba(64, 71, 150, 0.946); }
+    40% { color: rgba(50, 58, 150, 0.946); }
+    50% { color: rgba(52, 58, 111, 0.946); }
+    60% { color: rgba(102, 0, 133, 0.961); }
+    70% { color: rgba(97, 19, 121, 0.961); }
+    80% { color: rgba(118, 11, 79, 0.961); }
+    90% { color: rgba(134, 13, 59, 0.961); }
+    100% { color: rgba(132, 23, 46, 0.961); }
+}
+
+@media screen and (max-width: 1160px) {
+    .carousel{
+        width: 100%;
+        height: 460px;
+        overflow: hidden;
+    }    
+}
+
+@media screen and (max-width: 990px) {
+    .carousel{
+        width: 100%;
+        height: 460px;
+        overflow: hidden;
+    }   
+}
+
+@media screen and (max-width: 763px) {
+    .carousel{
+        width: 100%;
+        height: 295px;
+        overflow: hidden;
+    }   
+}
+
+

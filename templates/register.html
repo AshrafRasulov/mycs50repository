@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Register
+{% endblock %}
+
+{% block main %}
+
+<div class="container">
+  {% include "parts/header.html" %}
+</div>
+
+
+<h1>Registration</h1>
+
+<div class="row">
+    <div class="col"></div>
+    <div class="col">
+        <form action="/register" method="post">
+            <div class="mb-3 row">   
+                <label for="staticEmail" class="col-sm-12 col-md-4 col-form-label">Phone</label>
+                <div class="col-sm-12 col-md-8">
+                  <input type="tel" class="form-control" name="phone" placeholder="XXX-XXXX" style="padding-left: 5px;">
+                </div>
+            </div>
+            <p style="text-align: right; padding-right: 15px; color:black;"></p>
+            <div class="mb-3 row">   
+              <label for="staticEmail" class="col-sm-12 col-md-4 col-form-label">Email</label>
+              <div class="col-sm-12 col-md-8">
+                <input type="text" class="form-control" name="email" placeholder="email@example.com" style="padding-left: 5px;">
+              </div>
+            </div>
+            <div class="mb-3 row">
+              <label for="password" class="col-sm-12 col-md-4 col-form-label">Password</label>
+              <div class="col-sm-12 col-md-8">
+                <input type="password" class="form-control" name="password">
+              </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="inputPassword" class="col-sm-12 col-md-4 col-form-label">Confirm</label>
+                <div class="col-sm-12 col-md-8">
+                  <input type="password" class="form-control" name="confirmation">
+                </div>
+            </div>
+            <p style="text-align: center; color: color;"></p>
+            <br>
+            <button type="submit" class="btn btn-primary" style="float:right;" onclick="handleForm()">Register</button>
+            <br>
+        </form>
+    </div>
+    <div class="col"></div>
+</div>
+
+{% endblock %}
