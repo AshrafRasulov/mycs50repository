@@ -23,19 +23,15 @@ Order
                     <h4 class="imgprice">{{ cofee["price"] | usd}}</h4>
                     <img src="static/img/coffee/{{ cofee["img"] }}" alt="{{ cofee["img"]}}">
                     <h6 class="orderdata">{{cofee["orderDate"]}}</h6>
+                    {# <p id="timeris">{{cofee["PrTime"]}}</p> #}
                 </div>
                 <h3 class="ordertotalprc">total price: {{ (cofee["count"] * cofee["price"] ) | usd}}</h3>   
             </div>
         </div>
         <br>
     {% endfor %}
-{# <h1>Cofee {{ coffee["name"] }}</h1> #}
 
-{# <img src="../static/img/coffee/{{coffee['img'] }}" alt="{{coffee['img']}}" style="width: 400px; height: 400px; padding-right: 0;">
-<br>
-
-<p>{{coffee['content']}}</p> #}
-
+<script src="../static/js/homepageclient.js"></script>
 
 
 {% endblock %}
