@@ -10,7 +10,7 @@ from werkzeug.security import generate_password_hash
 import json
 
 # for demonstration will used secound like a minute
-minuteTemp = 5 # * 12
+minuteTemp = 1 *  5  * 12
 
 app = Flask(__name__)
 app.jinja_env.filters["usd"] = usd
@@ -245,7 +245,7 @@ def buy(data):
 @app.route("/myhome")
 def myhome():
     user_id = session["user_id"]
-    dbclient = db.execute("SELECT client_id, name, price, img, count, orderDate FROM orderTable JOIN tblCoffee ON tblCoffee.id = orderTable.coffeType WHERE orderTable.client_id = ?",
+    dbclient = db.execute("SELECT client_id, name, price, img, count, orderDate, orderTable.preparationTime AS 'PrTime' FROM orderTable JOIN tblCoffee ON tblCoffee.id = orderTable.coffeType WHERE orderTable.client_id = ?",
                            user_id)
     
     
@@ -282,6 +282,7 @@ def dataCcleanFromTable(user_id):
     print(Baristart)
     for prT in Baristart:
         time.sleep(int(prT["prtime"]) * minuteTemp)
+        
         # print(f"for coffeetype[{prT["id"]}]: need {prT["prtime"]}")
         db.execute("DELETE FROM orderTable WHERE id = ?", int(prT["id"]))
     return print("All Done")
